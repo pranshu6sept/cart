@@ -1,6 +1,7 @@
 import { Product } from "../redux/interface";
 import React from "react";
 import AddToCartBtn from "./AddtoCartBtn";
+import Image from "next/image";
 
 interface Props {
   product: Product;
@@ -12,7 +13,7 @@ const ProductCard = (props: Props) => {
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-lg ring-4 ring-blue-500 ring-opacity-40 max-w-sm">
     <div className="mt-2 relative">
-        <img className="h-48 w-full object-contain mb-4" src={props.product.image} alt={props.product.title}/>
+        <Image className="h-48 w-full object-contain mb-4" src={props.product.image} alt={props.product.title}/>
         <div className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">SALE
         </div>
     </div>
