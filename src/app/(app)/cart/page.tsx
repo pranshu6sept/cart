@@ -6,6 +6,8 @@ import { useAppSelector } from "../../../redux/store";
 import Link from "next/link";
 import DiscountCodeInput from "@/components/DiscountCodeInput";
 
+
+
 const CartPage = () => {
   const [discountPercentage, setDiscountPercentage] = React.useState<number>(0);
 
