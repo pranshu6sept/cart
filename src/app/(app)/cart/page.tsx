@@ -8,6 +8,7 @@ import DiscountCodeInput from "@/components/DiscountCodeInput";
 
 
 
+
 const CartPage = () => {
   const [discountPercentage, setDiscountPercentage] = React.useState<number>(0);
 
@@ -41,7 +42,7 @@ const CartPage = () => {
   return (
     <div className="p-2 flex flex-col gap-y-2 ">
       {cartItems.map((item,index) => (
-        <CartItemCard key={index} cartItem={item} />
+        <CartItemCard key={item.id || item.uniqueProperty} cartItem={item} />
       ))}
       <div className="mt-6 mx-4 space-y-3 p-4">
             <div className="flex items-center justify-between">
