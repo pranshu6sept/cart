@@ -1,7 +1,41 @@
+// {
+//   "extends": ["next/core-web-vitals"]
+// }
+
 {
-  "extends": ["next/core-web-vitals"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended" // If you're using TypeScript
+  ],
+  "parser": "@babel/eslint-parser", // Use this if you use Babel
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint" // If you're using TypeScript
+  ],
   "rules": {
-    "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
+    "react/react-in-jsx-scope": "off", // Next.js does not require React in scope
+    "react/prop-types": "off", // If using TypeScript, you might not need prop-types
+    "react/jsx-key": "warn", // Warn if keys are missing in lists
+    "react/jsx-uses-react": "off", // Not needed with React 17+ and JSX Transform
+    "react/jsx-uses-vars": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off", // If using TypeScript
+    "@typescript-eslint/no-explicit-any": "warn" // If using TypeScript
+  }
 }
-}
+

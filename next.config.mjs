@@ -7,6 +7,11 @@ const nextConfig = {
             hostname: 'fakestoreapi.com',
             pathname: '/img/**',
           },
+          {
+            protocol: 'https',
+            hostname: 'readymadeui.com',
+            pathname: '/images/**',
+          },
         ],
       },
 };

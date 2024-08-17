@@ -42,7 +42,7 @@ const CartPage = () => {
   return (
     <div className="p-2 flex flex-col gap-y-2 ">
       {cartItems.map((item,index) => (
-        <CartItemCard key={item.id || item.uniqueProperty} cartItem={item} />
+        <CartItemCard key={index} cartItem={item} />
       ))}
       <div className="mt-6 mx-4 space-y-3 p-4">
             <div className="flex items-center justify-between">

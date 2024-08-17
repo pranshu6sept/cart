@@ -10,8 +10,6 @@ export interface Product {
 }
 
 export interface CartItem {
-    id: Key | null | undefined;
-    uniqueProperty: Key | null | undefined;
     product: Product;
     qty: number;
   }
