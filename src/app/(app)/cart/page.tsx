@@ -54,7 +54,7 @@ const CartPage = () => {
               <p className="text-lg font-semibold text-gray-900">{shipping}</p>
             </div>
             <div className="flex items-center justify-between">
-              <p className="text-gray-400">Discount <span>(10%)</span></p>
+              <p className="text-gray-400">Discount <span>{discountPercentage} %</span></p>
               <p className="text-lg font-semibold text-gray-900">-{discountinUsd}</p>
             </div>
             <DiscountCodeInput onDiscountApply={handleDiscountApply}/>
